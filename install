@@ -1,0 +1,19 @@
+#!/bin/bash
+# install Dependencies
+# Gabriel Haab, Jan 2018
+
+# ===== Check Sudo =======
+if [ $(id -u) != "0" ]; then
+    echo "You need to be root to run this software, try:\nsudo ./install"
+echo "\n"
+    exit 1
+fi
+# ========================
+
+
+echo "Installing dependencies...." 
+sleep 5
+apt update
+apt install apktool openjdk-8-jdk msfpc
+
+echo "Thanks! Done!"
